@@ -1,0 +1,152 @@
+.main{
+    @include flexbox(center, space-around);
+    // background-color: #e7e8ea;
+    background-image: url("../images/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 93vh;
+    &__left{
+        width: 50%;
+        &__img{
+            width: 40%;
+            margin-left: 10rem;
+        }
+    }
+    &__right{
+        padding: 3rem 2rem 0;
+        margin-right: 3rem;
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0.85), white);
+        width: 26rem;
+        height: 80%;
+        border-radius: 2rem;
+        &__login{
+            &__header{
+                text-align: center;
+                margin-bottom: 2rem;
+                color: $base-color;
+                text-align: center;
+                font-size: 2.6rem;
+                font-weight: bold;
+            }
+            &__form{
+                padding: 2rem 0;
+                &__options{
+                    &__label{
+                        @include flexbox(center, space-between);
+                        margin: 0 auto 2rem;
+                        &__element{
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__input{
+                        padding-top: 1rem;
+                        &__group{
+                            display: none;
+                            margin-bottom: 1rem;
+                            &__label{
+                                margin-bottom: 0.5rem;
+                                color: #606060;
+                                display: block;
+                                font-size: .9rem;
+                            }
+                            &__inp-groups{
+                                position: relative;
+                                width: 100%;
+                                &__num{
+                                    position: absolute;
+                                    left: 0;
+                                    padding: 0.75rem 1rem;
+                                    color: #c3c3c3;
+                                }
+                                &__input-space{
+                                    padding: 0.75rem 4rem;
+                                    border: 1px solid #ededef;
+                                    width: 100%;
+                                    border-radius: 0.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__pass{
+                    margin-bottom: 1rem;
+                    &__name{
+                        margin-bottom: 0.5rem;
+                        color: #606060;
+                        display: block;
+                        font-size: .9rem;
+                    }
+                    &__inp{
+                        @extend .main__right__login__form__options__input__group__inp-groups__input-space;
+                        padding: 0.75rem 1rem;
+                    }
+                }
+
+                &__btn{
+                    color: #fff;
+                    background-color: $base-color;
+                    text-align: center;
+                    padding: 0.75rem 0.5rem;
+                    border: none;
+                    width: 100%;
+                    border-radius: 0.25rem;
+                    transition: background-color .3s ease, color .3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #122f60;
+                    }
+                }
+
+                &__ques{
+                    padding-top: 1rem;
+                    text-align: center;
+                    &__link{
+                        color: #414141;
+                        text-decoration: none;
+                        font-size: .8rem;
+                        font-family: inherit;
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                &__crt-acc{
+                    padding: 2rem 0 2rem 0;
+                    &__link{
+                        text-align: center;
+                        padding: 0.75rem 0.5rem;
+                        display: inline-block;
+                        width: 100%;
+                        cursor: pointer;
+                        border: 1px solid #ededef;
+                        border-color: $base-color;
+                        text-decoration: none;
+                        color: $base-color;
+                        font-family: inherit;
+                        font-size: .8rem;
+                        border-radius: 0.25rem;
+                        transition: background-color .3s ease, color .3s ease;
+                    }
+                    &:hover &__link{
+                        color: white;
+                        background-color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .active-option{
+        color: $base-color;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0.5rem 2px 0.5rem rgba(0,0,0,0.1);
+    }
+
+    .active-content{
+        display: block;
+    }
+}

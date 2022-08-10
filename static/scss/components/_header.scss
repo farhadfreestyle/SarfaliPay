@@ -1,0 +1,111 @@
+header{
+    padding: 1rem 0;
+    background-color: $base-color;
+    color: white;
+    position: relative;
+    z-index: 99;
+    .navbar{
+        @include flexbox(center, space-between);
+        @include containerStyle(1140px);
+        &__left{
+            // width: 50%;
+            @include flexbox(center, space-between);
+            &__logo{
+                padding-right: 3rem;
+                font-size: 30px;
+                &__link{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            &__content{
+                &__list{
+                    @include flexbox(center, space-between);
+                    &__list-item{
+                        padding: 0 0.5rem;
+                        cursor: pointer;
+
+                        &__link{
+                            line-height: 2rem;
+                            color: white;
+                            font-size: 16px;
+                            text-decoration: none;
+
+                            display: inline-block;
+                            position: relative;
+
+                            transition: opacity 0.3s;
+
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                transform: scaleX(0);
+                                height: 2px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #3b71fe;
+                                transform-origin: bottom right;
+                                transition: transform 0.25s ease-out;
+                            }
+                            &__img{
+                                width: 100%;
+                                font-weight: bold;
+                                &__first{
+                                    color: #FDC831;
+                                }
+                            }
+                        }
+
+ 
+                        // &:hover &__link::after,
+                        // &:hover &__link
+                        // {
+                        //     // transform: scaleX(1);
+                        //     // transform-origin: bottom left;
+                        //     color: red;
+                        //     // opacity: 1;
+                        // }
+
+                        .navbar__left__content__list__list-item:hover .navbar__left__content__list__list-item__link{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        &__right{
+            // width: 50%;
+            @include flexbox(center, space-between);
+            &__language-box{
+                padding: 3px 5px;
+                border: 1px solid #d9d0d0;
+                border-radius: 3px;
+                font-size: .7rem;
+                margin-right: 16px;
+                cursor: pointer;
+                & i{
+                    margin-left: 0.5rem
+                }
+            }
+            &__account{
+                @include flexbox(center, space-between);
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+                &__profile-photo{
+                    margin-left: 1rem;
+                }
+            }
+            &__logout{
+                margin-left: 1rem;
+                margin-right: 1rem;
+                cursor: pointer;
+                & a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}

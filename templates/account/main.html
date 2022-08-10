@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.min.css" /> -->
+    <script src="https://kit.fontawesome.com/d2b183de45.js" crossorigin="anonymous"></script>
+    <title>Attechers</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar__left">
+                <div class="navbar__left__logo">
+                    <a href="#" class="navbar__left__logo__link">
+                        <div class="navbar__left__logo__link__img">
+                            <span class="navbar__left__logo__link__img__first" style="color: #FDC831; font-weight: bold;">Sərfəli<span style="color: #C9D8EE" class="navbar__left__logo__link__img__first__second">Pay</span></span>
+                            
+                            <div style="font-size: 11px; color: #C9D8EE; font-weight: bold; margin-top: 5px;">Ödəniş sizdən, <span style="color: #FDC831;">TƏŞƏKKÜR</span> bizdən</div>
+                            <!-- <img src="./assets/images/SərfəliPay Ödəniş sizdən, TƏŞƏKKÜR bizdən.svg" alt=""> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar__right">
+                <div class="navbar__right__account">
+                    <span>Samİr Məmmədov Sərdar oğlu</span>
+                    <div class="navbar__right__account__profile-photo">
+                        <i class="far fa-user"></i>
+                    </div>
+                </div>
+                <div class="navbar__right__logout">
+                    <a href="./index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+                <div class="navbar__right__language-box">Az
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="container__aside">
+                <div class="container__aside__upper">
+                    <h4 class="container__aside__upper__header">Təşəkkür</h4>
+                    <span class="container__aside__upper__bonus">
+                        <!-- <span>
+                            <i class="fas fa-receipt"></i> 
+                        </span> 10 -->
+                        <!-- <img src="./assets/images/icons8-volunteering-50.png" alt=""> -->
+                        <!-- <img src="./assets/images/handshake (1).png" alt="Icon"> -->
+                        <img src="{%static 'images/handshake sarı.png'%}" alt="Icon">
+                        <span>1000</span>
+                    </span>
+                </div>
+                <div class="container__aside__lower">
+                    <ul class="container__aside__lower__list">
+                        <li class="container__aside__lower__list__list-item active-option">Hesablarım</li>
+                        <li class="container__aside__lower__list__list-item">Ödənişlər</li>
+                        <li class="container__aside__lower__list__list-item">Hədiyyələr</li>
+                        <li class="container__aside__lower__list__list-item">Bonus tarixçəsi</li>
+                        <li class="container__aside__lower__list__list-item">Əməliyyat tarixçəsi</li>
+                        <li class="container__aside__lower__list__list-item">Tariflər</li>
+                        <li class="container__aside__lower__list__list-item">FAQ</li>
+                        <li class="container__aside__lower__list__list-item">Tənzimləmələr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container__page active-content">
+                <h1 class="container__page__header">Hesablarım</h1>
+                <div class="container__page__accounts">
+                    <a href="https://api-test.bankrespublika.az/sso-v2/index.php?client_id=hackathonuser03">
+                        <div class="container__page__accounts__box">
+                            <div class="container__page__accounts__box__icon"><i class="fas fa-plus"></i></div>
+                            <h4 class="container__page__accounts__box__header">Yeni hesab əlavə et</h4>
+                            <p class="container__page__accounts__box__subtext">Hesabınızı əlavə edin və izləyin</p>
+                        </div>
+                    </a>
+                </div>
+           
+            </div>
+            <div class="container__page">
+                <section style="display: block;">
+                    <h1 class="container__page__header">Ödənişlər</h1>
+                    <div class="container__page__partners">
+                        <div class="container__page__partners__box">
+                            <div class="container__page__partners__box__icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="container__page__partners__box__text">Mobil</div>
+                        </div>
+                        <div class="container__page__partners__box">
+                            <div class="container__page__partners__box__icon"><i class="fas fa-wifi"></i></div>
+                            <div class="container__page__partners__box__text">İnternet</div>
+                        </div>
+                        <div class="container__page__partners__box">
+                            <div class="container__page__partners__box__icon"><i class="fas fa-faucet"></i></i></div>
+                            <div class="container__page__partners__box__text">Kommunal</div>
+                        </div>
+                        <div class="container__page__partners__box">
+                            <div class="container__page__partners__box__icon"><i class="fas fa-house-damage"></i></div>
+                            <div class="container__page__partners__box__text">Sığorta</div>
+                        </div>
+                        <div class="container__page__partners__box">
+                            <div class="container__page__partners__box__icon"><i class="fas fa-tv"></i></i></div>
+                            <div class="container__page__partners__box__text">TV</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container__page__scsfl-pay" style="display: none;">
+                    <div class="container__page__scsfl-pay__head">Ödənişiniz uğurla tamamlandı!</div>
+                    <div class="container__page__scsfl-pay__quiz-offer">
+                        <p class="container__page__scsfl-pay__quiz-offer__text">Təbrik edirik!</p>  
+                        <p class="container__page__scsfl-pay__quiz-offer__text">Ödəniş etməklə, siz 100 "təşəkkür" bonus qazandınız. Bununla yanaşı, 3 sadə suala cavab verməklə,
+                        qazandığınız bonus sayını ikiqat (100 --> 200) artıra bilərsiniz.</p>
+                        <p class="container__page__scsfl-pay__quiz-offer__text">Sorğuda iştirak etmək istəyirsinizmi?</p>
+                        <div class="container__page__scsfl-pay__quiz-offer__btn-container">
+                            <button class="container__page__scsfl-pay__quiz-offer__btn-container__button">Xeyr</button>
+                            <button class="container__page__scsfl-pay__quiz-offer__btn-container__button">Bəli</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="display: none;">
+                    <form>
+                        <div class="quiz-container">
+                            <div class="quiz-header">
+                                <h2 class="quiz-h2">1. Ödənişləri ən çox hansı platformalar vasitəsilə aparırsınız?</h2>
+                                <ul class="list">
+                                    <li class="list-item">
+                                        <input id="ans1" type="radio" name="question1" class="answer" required>
+                                        <label for="ans1">Mobil tətbiq</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input id="ans2" type="radio" name="question1" class="answer">
+                                        <label for="ans2">Ödəmə terminalı</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input id="ans3" type="radio" name="question1" class="answer">
+                                        <label for="ans3">Veb portal</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="quiz-header">
+                                <h2 class="quiz-h2">2. Son 1 ayda ən çox hansı kateqoriya üzrə vəsait xərcləmisiniz?</h2>
+                                <ul class="list">
+                                    <li class="list-item">
+                                        <input type="radio" name="question2" class="answer" required>
+                                        <label>Online alış-veriş</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question2" class="answer">
+                                        <label>Market</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question2" class="answer">
+                                        <label>Yanacaq doldurma məntəqəsi</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question2" class="answer">
+                                        <label>Restoran</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="quiz-header">
+                                <h2 class="quiz-h2">3. Qeyri-iş günləri çalışan Bank Respublikanın hansı filialıdır?</h2>
+                                <ul class="list">
+                                    <li class="list-item">
+                                        <input type="radio" name="question3" class="answer" required>
+                                        <label>Nizami filialı</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question3" class="answer">
+                                        <label>Nərimanov filialı</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question3" class="answer">
+                                        <label>Ofis24</label>
+                                    </li>
+                                
+                                    <li class="list-item">
+                                        <input type="radio" name="question3" id="correct" class="answer">
+                                        <label for="correct">Gəncə filialı</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <button type="submit" id="submit" class="btn-quiz">Göndər</button>
+                        
+                        </div>
+                    </form>
+                </section>
+
+                <section class="container__page__thanks" style="display: none;">
+                    <h1 class="container__page__thanks__header">Təbrik edirik!</h1>
+                    <div class="container__page__thanks__end">
+                        <p>Bonus sayı 100-dən 200-ə artırdınız. Sorğuda iştirak etdiyiniz üçün təşəkkür edirik.</p>
+                    </div>
+                    <div class="container__page__thanks__icon">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </section>
+
+                <section class="container__page__thanks" style="display: none;">
+                    <h1 class="container__page__thanks__header">Təbrik edirik!</h1>
+                    <div class="container__page__thanks__end">
+                        <p>Bonus sayı 100-dən 150-yə artırdınız.
+                        Sonuncu sualın düzgün cavabı: Cəlilabad. Sorğuda iştirak etdiyiniz üçün təşəkkür edirik.</p>
+                    </div>
+                    <div class="container__page__thanks__icon">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </section>
+
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">Hədiyyələr</h1>
+                <div class="container__page__surprises">
+                    <div class="container__page__surprises__box">
+                        <img class="container__page__surprises__box__img" src="{%static 'images/Cards (2).png'%}" alt="Bank product">
+                        <div class="container__page__surprises__box__info">
+                            <h3 class="container__page__surprises__box__info__header">NeoKart Standart</h3>
+                            <div class="container__page__surprises__box__info__price">
+                                <span class="container__page__surprises__box__info__price__spn">
+                                        <span>50.000</span>
+                                        <img class="pric-icon" src="{%static 'images/handshake-black.png'%}" alt="">
+                                        
+                                </span>
+                            </div>
+                            <button class="container__page__surprises__box__info__btn">Əldə et</button>
+                        </div>
+                    </div>
+                    <div class="container__page__surprises__box">
+                        <img class="container__page__surprises__box__img" src="{%static 'images/Cards.png'%}" alt="Bank product">
+                        <div class="container__page__surprises__box__info">
+                            <h3 class="container__page__surprises__box__info__header">NeoKart Premium</h3>
+                            <div class="container__page__surprises__box__info__price">
+                                <span class="container__page__surprises__box__info__price__spn">
+                                    <span>200.000</span>
+                                    <img class="pric-icon" src="{%static 'images/handshake-black.png'%}" alt="">
+                                </span>
+                            </div>
+                            <button class="container__page__surprises__box__info__btn">Əldə et</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">Bonus tarixçəsi</h1>
+                <div class="container__page__table">
+                    <div class="container__page__table__header">
+                        <div class="container__page__table__header__content">Xidmətin adı</div>
+                        <div class="container__page__table__header__content">Bonus</div>
+                        <div class="container__page__table__header__content">Ödəniş tarixi</div>
+                    </div>
+                    <div class="container__page__table__main">
+                        <div class="container__page__table__main__row">
+                            <div class="container__page__table__main__row__first">
+                                <div class="container__page__table__main__row__first__icon">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="container__page__table__main__row__first__op-name">
+                                    <div>Azercell</div>
+                                    <span>+99553499641</span>
+                                </div>
+                            </div>
+                            <div class="container__page__table__main__row__op-amount">-10</div>
+                            <div class="container__page__table__main__row__op-date">05.08.2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">Əməliyyat tarixçəsi</h1>
+                <div class="container__page__table">
+                    <div class="container__page__table__header">
+                        <div class="container__page__table__header__content">Xidmətin adı</div>
+                        <div class="container__page__table__header__content">Məbləğ</div>
+                        <div class="container__page__table__header__content">Bonus</div>
+                        <div class="container__page__table__header__content">Ödəniş tarixi</div>
+                    </div>
+                    <div class="container__page__table__main">
+                        <div class="container__page__table__main__row">
+                            <div class="container__page__table__main__row__first">
+                                <div class="container__page__table__main__row__first__icon">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="container__page__table__main__row__first__op-name">
+                                    <div>Azərişıq</div>
+                                    <span>xxxxxxxxxx</span>
+                                </div>
+                            </div>
+                            <div class="container__page__table__main__row__op-amount">20 <span>AZN</span></div>
+                            <div class="container__page__table__main__row__op-bonus">10</div>
+                            <div class="container__page__table__main__row__op-date">05.08.2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">Tariflər</h1>
+                <div class="container__page__tariffs">
+                    <p class="container__page__tariffs__text">"Təşəkkür" bonus sistemi.</p>
+                    <p class="container__page__tariffs__text">Portalda qeydiyyatdan keçmək - 1000 "təşəkkür" bonus.
+                        Hər ödənilən 1 AZN görə 100 "təşəkkür" hesablanır. Ödənişdən sonra  sorğudan keçmək təklif olunur. Sorğuda 3 sual
+                        verilir. Suallara cavab verildikdə bonuslar aşağıdakı şərtlərə uyğun olaraq hesablanır: </p>
+                        <p class="container__page__tariffs__text">1-ci sual - ödəniş məbləğinə görə hesablanan "təşəkkür"-lərə 25% əlavə olunur. <br>
+                        2-ci sual - ödəniş məbləğinə görə hesablanan "təşəkkür"-lərə 25% əlavə olunur. <br>
+                        3-cü sual - ödəniş məbləğinə görə hesablanan "təşəkkür"-lərə 50% əlavə olunur.</p>
+                    <p class="container__page__tariffs__text"><span class="samir">Nümunə:</span class="samir"> Müştəri 1 AZN civarında kommunal ödəniş etdikdə, ödənişə görə 100 "təşəkkür"
+                        qazanır. 1-ci suala cavab
+                        verdikdə - əlavə 25 bonus, 2-ci suala cavab verdikdə - əlavə 25 bonus. 3-cü suala düzgün cavab verdikdə əlavə
+                        50
+                        bonus qazanır. Toplam: 200 bonus.</p>
+                    <p class="container__page__tariffs__text">"Təşəkkür" bonusları yığaraq, portalda müxtəlif ödənişlər edə və ya bank
+                        məhsullarını endirimlə əldə edə bilərsiniz.</p>
+                </div>
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">FAQ</h1>
+                <div class="container__page__faq" id="#question1">
+                    <div class="container__page__faq__link" href="#question1">
+                        SərfəliPay nədir?
+                        <i class="fas fa-plus take-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="container__page__faq__answer">
+                        <p class="container__page__faq__answer__text">
+                            SərfəliPay müştərilərin rahat və təhlükəsiz ödəniş etməyinə, ödənişlər zamanı “Təşəkkür” bonusları qazanmağına xidmət edən
+                            platformadır.
+                        </p>
+                    </div>
+                </div>
+                <div class="container__page__faq" id="#question2">
+                    <div class="container__page__faq__link" href="#question2">
+                        “Təşəkkür” bonusları nədir?
+                        <i class="fas fa-plus take-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="container__page__faq__answer">
+                        <p class="container__page__faq__answer__text">
+                            “Təşəkkür” bonusları müştərilərin platforma üzərindən aparılan ödənişlərə görə qazandıqları bonuslardır. Bu bonuslar
+                            platforma daxili ödənişlər və hədiyyə seçimi zamanı istifadə edilə bilər
+                        </p>
+                    </div>
+                </div>
+                <div class="container__page__faq" id="#question3">
+                    <div class="container__page__faq__link" href="#question3">
+                        Bonuslar necə hesablanır?
+                        <i class="fas fa-plus take-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="container__page__faq__answer">
+                        <p class="container__page__faq__answer__text">
+                            Bonusların hesablanma qaydası ilə “Tariflər” bölməsində tanış ola bilərsiniz.
+                        </p>
+                    </div>
+                </div>
+                <div class="container__page__faq" id="#question5">
+                    <div class="container__page__faq__link" href="#question5">
+                        Ödənişdən sonra təklif olunan sorğuda iştirak etmək məcburidirmi?
+                        <i class="fas fa-plus take-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="container__page__faq__answer">
+                        <p class="container__page__faq__answer__text">
+                            Xeyr, məcburi deyil, lakin sorğuda iştirak etməyiniz sizə ödənişə görə hesablanan bonusları 2 qat artırmaq imkanıı
+                            yaradacaqdır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page">
+                <h1 class="container__page__header">Tənzimləmələr (Tezliklə...)</h1>
+                <div class="container__page__soon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__container__box">
+                <div class="popup__container__box__icon">
+                    <!-- <img src="https://img.icons8.com/ios/50/FFFFFF/hourglass-sand-top--v1.png" /> -->
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="popup__container__box__text">Bu xidmət tezliklə istifadənizə veriləcək</div>
+            </div>
+            <button class="popup__container__btn">Ok</button>
+        </div>
+    </div>
+
+    <script src="{%static 'js/mainPage.js'%}"></script>
+
+
+</body>
+
+</html>

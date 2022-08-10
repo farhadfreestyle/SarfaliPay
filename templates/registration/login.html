@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    <!-- <link rel="stylesheet" href="./assets/css/style.min.css" /> -->
+    <script src="https://kit.fontawesome.com/d2b183de45.js" crossorigin="anonymous"></script>
+    <title>Log in</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar__left">
+                <div class="navbar__left__logo">
+                    <a href="#" class="navbar__left__logo__link">
+                        <div class="navbar__left__logo__link__img">
+                            <span class="navbar__left__logo__link__img__first" style="color: #FDC831; font-weight: bold;">Sərfəli<span
+                                    style="color: #C9D8EE" class="navbar__left__logo__link__img__first__second">Pay</span></span>
+                            
+                            <div style="font-size: 11px; color: #C9D8EE; font-weight: bold; margin-top: 5px;">Ödəniş sizdən, <span
+                                    style="color: #FDC831;">TƏŞƏKKÜR</span> bizdən</div>
+                        </div>
+                    </a>
+                </div>
+                <nav class="navbar__left__content">
+                    <ul class="navbar__left__content__list">
+                        <li class="navbar__left__content__list__list-item">
+                            <a href="./main.html#faq" class="navbar__left__content__list__list-item__link">FAQ</a>
+                        </li>
+                        <li class="navbar__left__content__list__list-item">
+                            <a href="#" class="navbar__left__content__list__list-item__link">İstifadə qaydaları</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navbar__right">
+                <div class="navbar__right__language-box">Az
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="main">
+            <div class="main__left">
+                <!-- <img src="./assets/images/Untitled design (1).svg" alt="products" class="main__left__img"> -->
+            </div>
+            <div class="main__right">
+                <div class="main__right__login">
+                    <h1 class="main__right__login__header">Daxil ol</h1>
+
+                    
+                    {% if form.errors%}
+                    <p id="wrong-input">Daxil etdiyiniz məlumatlar yanlışdır</p>
+                    {% endif %}
+
+
+
+                    <form action="{% url 'login' %}" class="main__right__login__form" method="post">
+                        {% csrf_token %}
+                        <div class="main__right__login__form__options">
+                            <div class="main__right__login__form__options__label">
+                                <div class="main__right__login__form__options__label__element active-option">Mobil nömrə ilə</div>
+                                <div class="main__right__login__form__options__label__element">FİN ilə</div>
+                            </div>
+                            <div class="main__right__login__form__options__input">
+                                <div class="main__right__login__form__options__input__group active-content">
+                                    <label class="main__right__login__form__options__input__group__label" for="mobile">Mobil nömrə</label>
+                                    <div class="main__right__login__form__options__input__group__inp-groups">
+                                        <span class="main__right__login__form__options__input__group__inp-groups__num">+994</span>
+                                        <input id="mobile" class="main__right__login__form__options__input__group__inp-groups__input-space" placeholder="XX XXX XX XX" type="text">
+                                    </div>
+                                </div>
+                                <div class="main__right__login__form__options__input__group">
+                                    <label class="main__right__login__form__options__input__group__label" for="mobile">Şəxsiyyəti təsdiq edən sənədin FİN-i</label>
+                                    <div class="main__right__login__form__options__input__group__inp-groups">
+                                        {{form.username}}
+                                            <br>
+                                        {{form.phone_number}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__right__login__form__pass">
+                            <label for="password" class="main__right__login__form__pass__name">Şifrə</label>
+                            <!-- <input type="password" id="password" placeholder="********" class="main__right__login__form__pass__inp"> -->
+                            {{form.password}}
+                        </div>
+                        <button class="main__right__login__form__btn">Daxil ol</button>
+                        <div class="main__right__login__form__ques">
+                            <a href="#" class="main__right__login__form__ques__link">Şifrəni unutmusunuzmu?</a>
+                        </div>
+                        <div class="main__right__login__form__crt-acc">
+                            <a href="#" class="main__right__login__form__crt-acc__link">Qeydiyyatdan keç</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
